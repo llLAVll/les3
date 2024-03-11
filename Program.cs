@@ -1,2 +1,33 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿/*
+1. Написать программу, выводящую элементы двумерного массива по диагонали.
+2.Написать программу «Телефонный справочник»: создать двумерный массив 5х2,
+хранящий список телефонных контактов: первый элемент хранит имя контакта, второй — номер телефона/email.
+3. Написать программу, выводящую введённую пользователем строку в обратном порядке (olleH вместо Hello).
+*«Морской бой»: вывести на экран массив 10х10, состоящий из символов X и O, где Х — элементы кораблей, а О — свободные клетки.
+*/
+
+Console.Write("Введите размерность массива : ");
+int n = 0;
+n = Convert.ToInt32(Console.ReadLine());
+int[,] arr = new int[n,n];
+string textN = " ";
+int p = 0;
+for (int i = 0; i < n; i++)
+{
+    for (int j = 0; j < n; j++) 
+    {
+        arr[i,j] = new Random().Next(0,99);
+
+        Console.Write(arr[i,j]);
+        Console.WriteLine();
+       
+        for (int k = 0; k <= p; k++)
+        {
+            Console.Write(textN);
+        } 
+        p++;
+    }
+  
+}    
+
+
