@@ -5,29 +5,27 @@
 3. Написать программу, выводящую введённую пользователем строку в обратном порядке (olleH вместо Hello).
 *«Морской бой»: вывести на экран массив 10х10, состоящий из символов X и O, где Х — элементы кораблей, а О — свободные клетки.
 */
+using ConsoleApp4;
 
-Console.Write("Введите размерность массива : ");
-int n = 0;
-n = Convert.ToInt32(Console.ReadLine());
-int[,] arr = new int[n,n];
-string textN = " ";
-int p = 0;
-for (int i = 0; i < n; i++)
+Console.WriteLine("Выбор задачаи: (1-3) ");
+string num = Console.ReadLine();
+var t = new Tasks();
+switch (num)
 {
-    for (int j = 0; j < n; j++) 
-    {
-        arr[i,j] = new Random().Next(0,99);
 
-        Console.Write(arr[i,j]);
-        Console.WriteLine();
-       
-        for (int k = 0; k <= p; k++)
-        {
-            Console.Write(textN);
-        } 
-        p++;
-    }
-  
-}    
-
-
+	case "1":
+		Console.WriteLine("Вывод по диагонали:");
+        t.Task0();
+        break;
+    case "2":
+        Console.WriteLine("Справочник:");
+        t.Task1();
+        break;
+    case "3":
+        Console.WriteLine("Строка наоборот:");
+        t.Task2();
+        break;
+    default:
+		Console.WriteLine("ЧТо-то не работает :(");
+		break;
+}
